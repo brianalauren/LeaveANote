@@ -1,0 +1,16 @@
+<header>
+  <h1> Every Single Note Ever</h1>
+  <%= link_to 'Leave A Note', root_path %>
+</header>
+
+<% @notes.order('created_at desc').each do |note| %>
+
+  <div class="notes">
+    <%=link_to note_path(note) do %>
+      <h2><%= note.body %></h2>
+    <% end %>
+  </div>
+<p class="posted"><%= time_ago_in_words note.created_at %> ago</p>
+
+
+<% end %>

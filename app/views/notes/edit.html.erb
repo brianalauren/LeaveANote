@@ -1,0 +1,14 @@
+<header>
+  <h1> Edit Your Note</h1>
+  <%= link_to 'View All Notes', all_path %>
+  <%= link_to 'Leave A Note', root_path %>
+</header>
+
+
+<div class="editnote">
+
+  <%= simple_form_for @note do |f| %>
+    <%= f.input :body, palceholder: 'Tell me something...', label: false, error: 'Speak now or forever hold your peace!' %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
