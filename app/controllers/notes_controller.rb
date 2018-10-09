@@ -19,6 +19,7 @@ class NotesController < ApplicationController
       redirect_to root_path
     else
       render "index"
+      flash[:success] = 'Your note has been submitted!'
     end
   end
 
@@ -30,6 +31,7 @@ class NotesController < ApplicationController
 
     if @note.created_at < 5.minutes.ago
       redirect_to note_path(@note)
+      flash[:success] = 'Your note has been submitted!'
     end
   end
 
@@ -70,6 +72,8 @@ class NotesController < ApplicationController
     end
 
     redirect_to root_path
+    flash[:success] = 'Your note has been deleted!'
+
   end
 
 

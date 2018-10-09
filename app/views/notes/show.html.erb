@@ -1,13 +1,14 @@
   <header>
-    <%= link_to 'View All Notes', all_path %>
     <%= link_to 'Leave A Note', root_path %>
+    <%= link_to 'View All Notes', all_path %>
   </header>
 
   <div class="note">
     <h2><%= @note.body %></h2>
+    <p class="posted">Created <%= time_ago_in_words @note.created_at %> ago</p>
   </div>
 
-  <p class="posted">Created <%= time_ago_in_words @note.created_at %> ago</p>
+
 
   <div class="actions">
     <% if @note.created_at > 5.minutes.ago %>
