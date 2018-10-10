@@ -13,12 +13,11 @@
 
         <%=link_to note_path(note) do %>
           <div class="notes">
-            <h2><%= note.body %></h2>
+            <h2><%= truncate @note.body %></h2>
           </div>
         <% end %>
 
 
-      <!-- <p class="posted"><%= time_ago_in_words note.created_at %> ago</p> -->
       <% end %>
 
     </div>

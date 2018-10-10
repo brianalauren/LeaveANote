@@ -1,6 +1,8 @@
 <main>
   <div class="shownote">
-    <h2><%= @note.body %></h2>
+    <%= simple_format @note.body%>
+    <!-- <%= word_wrap(@note.body, :line_width => 10) %> -->
+
 
   </div>
 

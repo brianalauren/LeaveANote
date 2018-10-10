@@ -105,7 +105,7 @@
 
       height: 400px;
       width:100%;
-      padding: 5px;
+      padding: 10px;
       margin-top: 150px;
 
       resize: none;
@@ -210,6 +210,7 @@
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
         text-align: center;
+        word-break:break-all;
 
         height: 200px;
         width: 300px;
@@ -235,9 +236,10 @@
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     text-align: center;
+    word-break:break-all;
 
     position:fixed;
-    top: 40%;
+    top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 
