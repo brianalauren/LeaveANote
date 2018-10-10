@@ -5,26 +5,29 @@
 // font-family: 'Open Sans', sans-serif;
 
 
-
-
   body{
     color: #000;
     font-family: 'Poppins', sans-serif;
     font-size:18px;
-    width:80%;
     margin: auto;
   }
 
+  main{
+    width: 80%;
+    margin:auto;
+  }
+
   h1, h2, h3{
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 24px;
   }
 
+  h3 {text-align: center;}
+
   a{
     text-decoration: none;
     color: #000;
-    border-bottom: solid 2px #000;
+    border-bottom: solid 2px #fff;
   }
 
   header{
@@ -32,15 +35,35 @@
     justify-content: space-between;
     align-items: center;
 
-    h2, a{
-      font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+    width: 100%;
+
+    h1, a{
+      margin: 0px 20px;
+      color: white;
+      margin: 20px;
+
     }
 
   }
 
   div.note{
     margin: auto;
+
     width:50%;
+
+    textarea, input{
+      border: 2px solid #000;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      box-sizing: border-box;
+      outline: none;
+    }
 
     textarea {
       font-family: 'Poppins', sans-serif;
@@ -49,14 +72,8 @@
       height: 400px;
       width:100%;
       padding: 5px;
-      margin-top: 30px;
+      margin-top: 150px;
 
-      border: 2px solid #000;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-      box-sizing: border-box;
-      outline: none;
       resize: none;
     }
 
@@ -65,19 +82,11 @@
       font-size: 18px;
       text-align: center;
 
-      // padding: 10px;
       width: 100%;
-
-      border: 2px solid #000;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     }
   }
 
-  h3{
-    text-align: center;
-  }
+
 
 
   section.options{
@@ -113,13 +122,13 @@
 
         div.colors div{
           text-align: center;
+          cursor: pointer;
 
           width: 30px;
           height: 30px;
           margin-right: 10px;
           margin-top: 5px;
 
-          border: 2px solid rgba(255, 255, 255, 0.25);
           border-radius: 50%;
           border: 2px solid #000;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -128,18 +137,17 @@
         }
 
         div.colors div.selected{
-          border: 2px solid #fff;
+          border: 4px solid #000;
         }
 
   }
-
-
 
   div.allnotes{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 130px 0px;
 
     div.notes{
         font-family: 'Poppins', sans-serif;
@@ -155,9 +163,76 @@
         border-radius: 4px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        box-sizing: border-box;
         outline: none;
         resize: none;
 
+    }
+  }
+
+  div.shownote{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    text-align: center;
+
+    position:fixed;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    height: 400px;
+    width: 450px;
+    padding: 5px;
+
+    border: 2px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+  }
+
+  footer{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    text-align:center;
+    background-color: black;
+    color: white;
+
+    // a{
+    //   margin: 0px 20px;
+    //   color: white;
+    //   margin: 20px;
+    // }
+  }
+
+  div.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    left:0;
+    bottom: 20px;
+
+    z-index: 2;
+    // margin: 0px 20px;
+    color: white;
+    // margin: 0px 20px;
+
+
+    // background-color: pink;
+
+
+    h2, a{
+      font-size: 18px;
+      color: white;
+      padding-right:20px;
+      padding-left: 20px;
+      border-bottom: none;
     }
   }

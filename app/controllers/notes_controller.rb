@@ -67,11 +67,11 @@ class NotesController < ApplicationController
   def destroy
     @note = Note.find(params[:id])
 
-    if @note.created_at < 5.minutes.ago
-      @note.destroy
-    end
 
-    redirect_to root_path
+    @note.destroy
+
+
+    redirect_to all_path
     flash[:success] = 'Your note has been deleted!'
 
   end

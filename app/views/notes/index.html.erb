@@ -4,33 +4,4 @@
   </header>
 
 
-  <div class="note">
-    <%= simple_form_for @note do |f| %>
-      <%= f.input :body, palceholder: 'Tell me something...', label: false, error: 'Speak now or forever hold your peace!' %>
-      <%= f.button :submit %>
-    <% end %>
-  </div>
-
-  <section class="options">
-    <!-- <h3>Options</h3> -->
-    <div class="option">
-      <label>Typeface</label>
-      <select name="typeface" class="choose">
-        <option value="Faune">Faune</option>
-        <option value="Montserrat Alternates">Montserrat Alternates</option>
-        <option value="Prompt">Prompt</option>
-        <option value="Trirong">Trirong</option>
-        <option value="Montserrat">Montserrat</option>
-        </select>
-      </div>
-
-      <div class="option">
-        <label>Theme</label>
-        <div class="colors">
-          <div style="background-color: #2a2a2a; color: #fff;" class="selected">a</div>
-          <div style="background-color: #fff; color: #2a2a2a;">a</div>
-          <div style="background-color: #63ff03; color: #2a2a2a;">a</div>
-          <div style="background-color: #ee0073; color: #fff;">a</div>
-        </div>
-      </div>
-  </section>
+  <%= render 'createnote' %>
