@@ -9,8 +9,8 @@
 
   <div class="actions">
     <% if @note.created_at > 5.minutes.ago %>
-      <%= link_to "Edit this note", edit_note_path(@note)%>
-      <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"} %>
+      <%= link_to "Edit this note", edit_note_path(@note), :class => "effect-shine"%>
+      <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}, :class => "effect-shine" %>
     <% end %>
   </div>
 

@@ -1,13 +1,12 @@
 
   <header>
-    <%= link_to 'Random Note', rand_path %>
+    <%= link_to 'Random Note', rand_path, :class => "effect-shine"%>
     <h1> Every Single Note Ever</h1>
-    <%= link_to 'Leave A Note', root_path %>
+    <%= link_to 'Leave A Note', root_path, :class => "effect-shine" %>
   </header>
 
-
   <main>
-    <section>
+    <section class="allnotesz">
     <div class="allnotes">
       <% @notes.order('created_at desc').each do |note| %>
 

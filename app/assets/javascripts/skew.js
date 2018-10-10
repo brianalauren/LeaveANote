@@ -1,4 +1,4 @@
-  const section = document.querySelector("section")
+  const section = document.querySelector("section.allnotesz")
   let currentPixel = window.pageYOffset
 
   const looper = function(){
