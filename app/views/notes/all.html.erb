@@ -1,11 +1,13 @@
 
   <header>
+    <%= link_to 'Random Note', rand_path %>
     <h1> Every Single Note Ever</h1>
     <%= link_to 'Leave A Note', root_path %>
   </header>
 
 
   <main>
+    <section>
     <div class="allnotes">
       <% @notes.order('created_at desc').each do |note| %>
 
@@ -21,4 +23,8 @@
       <% end %>
 
     </div>
+    </section>
   </main>
+
+
+<script src="skew.js"></script>
