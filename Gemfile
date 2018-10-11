@@ -37,7 +37,6 @@ gem 'jbuilder', '~> 2.5'
 # gems i like
 gem 'simple_form'
 gem "profanity_filter"
-gem 'emoji'
 gem 'meta-tags'
 
 
@@ -80,7 +79,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
-
-ruby '2.5.1'

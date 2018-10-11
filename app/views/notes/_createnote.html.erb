@@ -1,8 +1,7 @@
-  <main>
 
     <div class="note">
       <%= simple_form_for @note do |f| %>
-        <%= f.input :body, palceholder: 'Tell me something...', label: false, error: 'Speak now or forever hold your peace!' %>
+        <%= f.input :body, placeholder: 'Tell me something...', label: false, error: 'Are you sure you have nothing to say?' %>
         <%= f.button :submit %>
       <% end %>
     </div>
@@ -22,7 +21,7 @@
         <div class="option">
           <label>Theme</label>
           <div class="colors">
-            <div style="background-color: #2a2a2a; color: #fff;" class="selected">a</div>
+            <div style="background-color: #2a2a2a; color: #fff;">a</div>
             <div style="background-color: #fff; color: #2a2a2a;">a</div>
             <div style="background-color: #63ff03; color: #2a2a2a;">a</div>
             <div style="background-color: #ee0073; color: #fff;">a</div>
@@ -30,4 +29,6 @@
         </div>
     </section> -->
 
-  </main>
+    <footer>
+      <p><%= link_to "Created by: Briana Gude", "www.brianabriana.com", :target => "_blank" %></p>
+    </footer>

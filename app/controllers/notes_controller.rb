@@ -18,13 +18,12 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(form_params)
 
-
     if @note.save
+      flash[:success] = "Your note has been submitted!"
       redirect_to root_path
     else
       render "index"
     end
-    flash[:success] = 'Your note has been submitted!'
 
   end
 
@@ -66,7 +65,7 @@ class NotesController < ApplicationController
 
     @note.destroy
 
-    redirect_to all_path
+    redirect_to rand_path
     flash[:success] = 'Your note has been deleted!'
 
   end

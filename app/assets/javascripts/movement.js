@@ -11,11 +11,13 @@ document.addEventListener("mousemove", function(event){
 
 //   the smaller the number the bigger it will twist
   const angleX = (targetY - y) / 20
-  const angleY = (targetX - x) / -20
+  const angleY = (targetX - x) / 20
 
   target.style.transform = "rotateX(" + angleX +"deg) rotateY(" + angleY + "deg) translate(-30%, -30%)"
-  document.body.style.perspective = "800px"
-  target.style.margin = ("350px 350px 0 0")
+  // document.body.style.perspective = "500px"
+  // target.style.width = '400px'
+  // target.style.height = '500px'
+
 
 
 })

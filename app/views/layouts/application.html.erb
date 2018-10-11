@@ -9,8 +9,21 @@
   </head>
 
   <body>
+    <% if flash[:success].present?%>
+      <div class="success">
+        <%= flash[:success]%>
+      </div>
+    <% end %>
+
+    <% if flash[:error].present?%>
+      <div class="error">
+        <%= flash[:error]%>
+      </div>
+    <% end %>
     <%= yield %>
-    
+
     <%= javascript_include_tag 'application' %>
+
+    
   </body>
 </html>

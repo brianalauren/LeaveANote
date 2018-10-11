@@ -5,7 +5,6 @@
     <%= link_to 'Leave A Note', root_path, :class => "effect-shine" %>
   </header>
 
-  <main class="show">
     <section class="allnotesz">
       <div class="allnotes">
         <% @notes.order('created_at desc').each do |note| %>
@@ -20,7 +19,9 @@
 
 
         <% end %>
-
       </div>
     </section>
-  </main>
+
+    <footer>
+      <p><%= link_to "Created by: Briana Gude", "www.brianabriana.com", :target => "_blank" %></p>
+    </footer>

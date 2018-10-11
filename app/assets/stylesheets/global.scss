@@ -2,58 +2,50 @@
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Mono', monospace;
 
+  div.success, div.error{
+    display: flex;
+    color: red;
+    justify-content: center;
+    width: 100vw;
+  }
 
   body{
-    color: #000;
+    color: black;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 700;
-    font-size:18px;
+    font-weight: 900;
+    font-size: 18px;
+
     margin: auto;
-
     cursor:crosshair;
-    // perspective: 800px;
-
   }
 
-  main{
-    width: 80%;
-    margin:auto;
-  }
-
-  h1, h2, h3{
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  h3 {text-align: center;}
 
   a{
     text-decoration: none;
     color: #000;
-    // border-bottom: solid 2px #fff;
   }
 
     // effect-shine
-    a.effect-shine:hover {
-      -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.9) 30%, #000 50%, rgba(0,0,0,.9) 70%);
-      -webkit-mask-size: 200%;
-      animation: shine 2s infinite;
-    }
+    // a.effect-shine:hover {
+    //   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.9) 30%, #000 50%, rgba(0,0,0,.9) 70%);
+    //   -webkit-mask-size: 200%;
+    //   animation: shine 2s infinite;
+    // }
+    //
+    // @-webkit-keyframes shine {
+    //   from {
+    //     -webkit-mask-position: 150%;
+    //   }
+    //
+    //   to {
+    //     -webkit-mask-position: -50%;
+    //   }
+    // }
 
-    @-webkit-keyframes shine {
-      from {
-        -webkit-mask-position: 150%;
-      }
-
-      to {
-        -webkit-mask-position: -50%;
-      }
-    }
 
   header{
     font-family: 'Roboto', sans-serif;
-    color: black;
-    font-weight: bolder;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,70 +54,66 @@
     top: 0;
     left: 0;
 
-    // background-color: black;
     width: 100%;
 
-    h1{
-      // color: white;
-      margin: 20px;
+    h1, a{
+      margin: 20px 40px;
     }
 
     a{
       color: black;
-      background-color: white;
-      padding: .3em;
-      margin: 20px;
+      background-color: none;
 
-      // border-radius: 4px;
-      border: 2px solid #000;
-      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding-bottom: .3em;
+      border-bottom: 3px solid #000;
 
       outline: none;
       resize: none;
-
-      transition: box-shadow 0.2s;
-
-      &:hover {box-shadow: none;}
     }
   }
 
+
+  textarea, input, div.notes, div.shownote{
+    box-shadow: none;
+    border: 5px solid #000;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+
   div.note{
     margin: auto;
-
     width:50%;
+
+    }
 
     textarea, input{
       font-family: 'Roboto Mono', monospace;
-
-      border: 2px solid #000;
-      // border-radius: 4px;
-      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      font-size: 18px;
+      font-weight: 600;
 
       box-sizing: border-box;
       outline: none;
     }
 
     textarea {
-      font-size: 18px;
-
       height: 400px;
       width:100%;
       padding: 10px;
-      margin-top: 150px;
+      margin: 150px 0 10px 0;
 
       resize: none;
     }
 
     input[type=submit] {
-      font-size: 18px;
       text-align: center;
       cursor:pointer;
 
       width: 100%;
-      transition: box-shadow 0.2s;
-
-      &:hover {box-shadow: none;}
-    }
   }
 
 
@@ -138,151 +126,117 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+    }
 
 
       div.option{
         margin: 50px;
       }
 
-        label{
-          display: block;
-          margin-bottom: 5px;
+      label{
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      label span{
+        float: right;
+        font-style: italic;
+      }
+
+      select, div.colors div{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
+
+        border: 3px solid #000;
+        box-shadow: none;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
         }
+      }
 
-        label span{
-          float: right;
-          font-style: italic;
-        }
+      select{
+        width:100%;
+        padding: 5em;
+        margin-top: 10px;
+        outline: none;
+      }
 
-        select{
-          font-family: 'Roboto Mono', monospace;
-          font-size: 12px;
+      div.colors{
+        display: flex;
+      }
 
-          width:100%;
-          padding: 5em;
-          margin-top: 10px;
-          outline: none;
+      div.colors div{
+        text-align: center;
+        cursor: pointer;
 
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-top: 5px;
 
-          // border-radius: 4px;
-          border: 2px solid #000;
-          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 50%;
+        transition: border 0.2s;
 
-          transition: box-shadow 0.2s;
+        // &:hover {border: rgba(155, 155, 155, 1);}
 
-          &:hover {box-shadow: none;}
-        }
-
-        div.colors{
-          display: flex;
-        }
-
-        div.colors div{
-          text-align: center;
-          cursor: pointer;
-
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
-          margin-top: 5px;
-
-          border-radius: 50%;
-          border: 2px solid #000;
-          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-          transition: box-shadow 0.2s;
-          &:hover {box-shadow: none;}
-        }
-
-        div.colors div.selected{
-          box-shadow: none;
-        }
-
-
-
+      div.colors div.selected{
+        border: rgba(155, 155, 155, 1);
+      }
   }
+
 
   div.allnotes{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 100px 0px;
-    z-index: 1;
+
+    width: 80%;
+    margin: 100px auto 80px auto;
+
+    div.notes, div.shownote{
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      text-align: center;
+      word-break: normal;
+      hyphens: auto;
+    }
 
     div.notes{
-        font-family: 'Roboto Mono', monospace;
-        font-size: 12px;
-        text-align: center;
-        word-break: normal;
-        hyphens: auto;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
-        // overflow: hidden;
-
         height: 200px;
         width: 300px;
         padding: 15px;
         margin: 10px;
 
-
-        border: 2px solid #000;
-        // border-radius: 4px;
-        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
         outline: none;
         resize: none;
+        background-color: white;
+        transition: background-color 0.2s;
 
-        transition: box-shadow 0.2s;
-
-        &:hover {box-shadow: none;}
-
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
     }
   }
 
-  main.show{
-
-  }
 
   div.shownote{
-    font-family: 'Roboto Mono', monospace;
     font-size: 18px;
-    text-align: center;
-    word-break:break-all;
 
     position:fixed;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 
-    height: 400px;
-    width: 450px;
+    height: 500px;
+    width: 550px;
     padding: 10px;
-
-    border: 2px solid #000;
-    // border-radius: 4px;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     box-sizing: border-box;
     outline: none;
     resize: none;
-  }
-
-  footer{
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-    text-align:center;
-    background-color: black;
-    color: white;
-
-    // a{
-    //   margin: 0px 20px;
-    //   color: white;
-    //   margin: 20px;
-    // }
   }
 
   div.actions{
@@ -296,19 +250,30 @@
     bottom: 20px;
 
     z-index: 2;
-    // margin: 0px 20px;
     color: white;
-    // margin: 0px 20px;
 
-
-    // background-color: pink;
-
-
-    h2, a{
+    a{
       font-size: 18px;
       color: white;
-      padding-right:20px;
-      padding-left: 20px;
+
+      padding: 0 20px;
+      // margin-top: 15px;
       border-bottom: none;
+    }
+  }
+
+  footer{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    text-align:center;
+    background-color: black;
+    color: white;
+
+    a, p{
+      margin: 15px 40px;
+      color: white;
     }
   }
