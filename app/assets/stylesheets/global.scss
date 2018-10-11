@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins|Roboto|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
 // font-family: 'Roboto', sans-serif;
-// font-family: 'Poppins', sans-serif;
-// font-family: 'Work Sans', sans-serif;
-// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto Mono', monospace;
 
 
   body{
     color: #000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
     font-size:18px;
     margin: auto;
 
     cursor:crosshair;
+    // perspective: 800px;
+
   }
 
   main{
@@ -50,6 +51,9 @@
     }
 
   header{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: bolder;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,11 +62,11 @@
     top: 0;
     left: 0;
 
-    background-color: black;
+    // background-color: black;
     width: 100%;
 
     h1{
-      color: white;
+      // color: white;
       margin: 20px;
     }
 
@@ -72,7 +76,7 @@
       padding: .3em;
       margin: 20px;
 
-      border-radius: 4px;
+      // border-radius: 4px;
       border: 2px solid #000;
       box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -91,8 +95,10 @@
     width:50%;
 
     textarea, input{
+      font-family: 'Roboto Mono', monospace;
+
       border: 2px solid #000;
-      border-radius: 4px;
+      // border-radius: 4px;
       box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       box-sizing: border-box;
@@ -100,7 +106,6 @@
     }
 
     textarea {
-      font-family: 'Poppins', sans-serif;
       font-size: 18px;
 
       height: 400px;
@@ -112,7 +117,6 @@
     }
 
     input[type=submit] {
-      font-family: 'Poppins', sans-serif;
       font-size: 18px;
       text-align: center;
       cursor:pointer;
@@ -151,7 +155,7 @@
         }
 
         select{
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Roboto Mono', monospace;
           font-size: 12px;
 
           width:100%;
@@ -160,7 +164,7 @@
           outline: none;
 
 
-          border-radius: 4px;
+          // border-radius: 4px;
           border: 2px solid #000;
           box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -207,19 +211,23 @@
     z-index: 1;
 
     div.notes{
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto Mono', monospace;
         font-size: 12px;
         text-align: center;
-        word-break:break-all;
+        word-break: normal;
+        hyphens: auto;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+        // overflow: hidden;
 
         height: 200px;
         width: 300px;
-        padding: 5px;
+        padding: 15px;
         margin: 10px;
 
 
         border: 2px solid #000;
-        border-radius: 4px;
+        // border-radius: 4px;
         box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         outline: none;
@@ -232,8 +240,12 @@
     }
   }
 
+  main.show{
+
+  }
+
   div.shownote{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 18px;
     text-align: center;
     word-break:break-all;
@@ -245,10 +257,10 @@
 
     height: 400px;
     width: 450px;
-    padding: 5px;
+    padding: 10px;
 
     border: 2px solid #000;
-    border-radius: 4px;
+    // border-radius: 4px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     box-sizing: border-box;

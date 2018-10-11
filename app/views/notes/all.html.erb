@@ -5,24 +5,22 @@
     <%= link_to 'Leave A Note', root_path, :class => "effect-shine" %>
   </header>
 
-  <main>
+  <main class="show">
     <section class="allnotesz">
-    <div class="allnotes">
-      <% @notes.order('created_at desc').each do |note| %>
+      <div class="allnotes">
+        <% @notes.order('created_at desc').each do |note| %>
 
 
-        <%=link_to note_path(note) do %>
-          <div class="notes">
-            <h2><%= truncate @note.body %></h2>
-          </div>
+          <%=link_to note_path(note) do %>
+            <div class="notes">
+              <h2><%= (truncate note.body, length: 100) %></h2>
+              <!-- <h2><%= note.body %></h2> -->
+            </div>
+          <% end %>
+
+
         <% end %>
 
-
-      <% end %>
-
-    </div>
+      </div>
     </section>
   </main>
-
-
-<script src="skew.js"></script>
