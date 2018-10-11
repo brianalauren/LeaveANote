@@ -5,9 +5,13 @@ class NotesController < ApplicationController
   end
 
 
-
   def all
     @notes = Note.all
+  end
+
+
+  def rand
+      @note = Note.order('RANDOM()').first
   end
 
 
@@ -20,9 +24,9 @@ class NotesController < ApplicationController
     else
       render "index"
     end
+    flash[:success] = 'Your note has been submitted!'
+
   end
-
-
 
 
   def edit
@@ -31,16 +35,13 @@ class NotesController < ApplicationController
     if @note.created_at < 5.minutes.ago
       redirect_to note_path(@note)
     end
+    flash[:success] = 'Your note has been submitted!'
   end
-
-
 
 
   def show
     @note = Note.find(params[:id])
   end
-
-
 
 
   def update
@@ -60,20 +61,15 @@ class NotesController < ApplicationController
   end
 
 
-
-
   def destroy
     @note = Note.find(params[:id])
 
-    if @note.created_at < 5.minutes.ago
-      @note.destroy
-    end
+    @note.destroy
 
-    redirect_to root_path
+    redirect_to all_path
+    flash[:success] = 'Your note has been deleted!'
+
   end
-
-
-
 
 
   def form_params

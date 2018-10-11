@@ -1,20 +1,26 @@
+
   <header>
+    <%= link_to 'Random Note', rand_path, :class => "effect-shine"%>
     <h1> Every Single Note Ever</h1>
-    <%= link_to 'Leave A Note', root_path %>
+    <%= link_to 'Leave A Note', root_path, :class => "effect-shine" %>
   </header>
 
+  <main class="show">
+    <section class="allnotesz">
+      <div class="allnotes">
+        <% @notes.order('created_at desc').each do |note| %>
 
 
-  <div class="allnotes">
-    <% @notes.order('created_at desc').each do |note| %>
+          <%=link_to note_path(note) do %>
+            <div class="notes">
+              <h2><%= (truncate note.body, length: 100) %></h2>
+              <!-- <h2><%= note.body %></h2> -->
+            </div>
+          <% end %>
 
-      <div class="notes">
-        <%=link_to note_path(note) do %>
-          <h2><%= note.body %></h2>
+
         <% end %>
+
       </div>
-
-    <!-- <p class="posted"><%= time_ago_in_words note.created_at %> ago</p> -->
-    <% end %>
-
-  </div>
+    </section>
+  </main>
