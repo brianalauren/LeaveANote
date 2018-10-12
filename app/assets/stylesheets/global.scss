@@ -9,7 +9,9 @@
     width: 100vw;
   }
 
+
   body{
+    background-color: white;
     color: black;
     font-family: 'Roboto Mono', monospace;
     font-weight: 900;
@@ -56,6 +58,8 @@
 
     width: 100%;
 
+    z-index: 5;
+
     h1, a{
       margin: 20px 40px;
     }
@@ -64,127 +68,123 @@
       color: black;
       background-color: none;
 
-      padding-bottom: .3em;
-      border-bottom: 3px solid #000;
+      padding: .3em;
 
+      border-bottom: 5px solid #000;
       outline: none;
       resize: none;
+
+      &:hover{border-bottom: 5px dotted #000;}
     }
+
   }
-
-
-  textarea, input, div.notes, div.shownote{
-    box-shadow: none;
-    border: 5px solid #000;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-
 
 
   div.note{
     margin: auto;
     width:50%;
-
     }
 
-    textarea, input{
-      font-family: 'Roboto Mono', monospace;
-      font-size: 18px;
-      font-weight: 600;
 
-      box-sizing: border-box;
-      outline: none;
-    }
+  textarea, input{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 600;
 
-    textarea {
-      height: 400px;
-      width:100%;
-      padding: 10px;
-      margin: 150px 0 10px 0;
-
-      resize: none;
-    }
-
-    input[type=submit] {
-      text-align: center;
-      cursor:pointer;
-
-      width: 100%;
+    box-sizing: border-box;
+    outline: none;
   }
 
+  textarea {
+    height: 400px;
+    width:100%;
+    padding: 10px;
+    margin: 150px 0 10px 0;
+    resize: none;
+  }
+
+  input[type=submit] {
+    text-align: center;
+    cursor:pointer;
+    width: 100%;
+  }
 
 
 
   section.options{
-      width: 100%;
-      padding: 0px 20px 20px 20px;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
 
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+  div.option{
+    margin: 50px;
+  }
+
+  label{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  label span{
+    float: right;
+    font-style: italic;
+  }
+
+  select, div.colors div{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+
+    border: 3px solid #000;
+    box-shadow: none;
+    transition: background-color 0.2s;
+
+    &:hover {background-color: #C8C8C8}
+  }
+
+  select{
+    width:100%;
+    padding: 5em;
+    margin-top: 10px;
+    outline: none;
+  }
+
+  div.colors{
+    display: flex;
+  }
+
+  div.colors div{
+    text-align: center;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+
+    border-radius: 50%;
+    transition: border 0.2s;
+
+    &:hover {border: rgba(155, 155, 155, 1);}
+
+    div.selected{
+      border: rgba(155, 155, 155, 1);}
     }
 
 
-      div.option{
-        margin: 50px;
+    textarea, input, div.notes, div.shownote{
+      border: 5px solid #000;
+      transition: background-color 0.2s;
+      background-color: white;
+
+      &:hover {
+        background-color: #C8C8C8;
       }
-
-      label{
-        display: block;
-        margin-bottom: 5px;
-      }
-
-      label span{
-        float: right;
-        font-style: italic;
-      }
-
-      select, div.colors div{
-        font-family: 'Roboto Mono', monospace;
-        font-size: 18px;
-
-        border: 3px solid #000;
-        box-shadow: none;
-        transition: background-color 0.2s;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.3);
-        }
-      }
-
-      select{
-        width:100%;
-        padding: 5em;
-        margin-top: 10px;
-        outline: none;
-      }
-
-      div.colors{
-        display: flex;
-      }
-
-      div.colors div{
-        text-align: center;
-        cursor: pointer;
-
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        margin-top: 5px;
-
-        border-radius: 50%;
-        transition: border 0.2s;
-
-        // &:hover {border: rgba(155, 155, 155, 1);}
-
-      div.colors div.selected{
-        border: rgba(155, 155, 155, 1);
-      }
-  }
+    }
 
 
   div.allnotes{
@@ -195,31 +195,27 @@
 
     width: 80%;
     margin: 100px auto 80px auto;
-
-    div.notes, div.shownote{
-      font-family: 'Roboto Mono', monospace;
-      font-size: 12px;
-      text-align: center;
-      word-break: normal;
-      hyphens: auto;
-    }
-
-    div.notes{
-        height: 200px;
-        width: 300px;
-        padding: 15px;
-        margin: 10px;
-
-        outline: none;
-        resize: none;
-        background-color: white;
-        transition: background-color 0.2s;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.3);
-        }
-    }
   }
+
+  div.notes, div.shownote{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    text-align: center;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  div.notes{
+      height: 200px;
+      width: 300px;
+      padding: 15px;
+      margin: 10px;
+
+      outline: none;
+      resize: none;
+      background-color: white;
+  }
+
 
 
   div.shownote{
@@ -247,33 +243,38 @@
     position: fixed;
     width: 100%;
     left:0;
-    bottom: 20px;
+    bottom: 0;
 
     z-index: 2;
     color: white;
 
     a{
-      font-size: 18px;
       color: white;
-
+    //
       padding: 0 20px;
-      // margin-top: 15px;
-      border-bottom: none;
+      // margin-bottom: 15px;
+    //   border-bottom: none;
     }
   }
 
   footer{
-    position:fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    position:fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
 
     text-align:center;
     background-color: black;
     color: white;
 
-    a, p{
-      margin: 15px 40px;
-      color: white;
-    }
+    // a, p{
+    //   margin: 15px 40px;
+    //   color: white;
+    // }
   }
