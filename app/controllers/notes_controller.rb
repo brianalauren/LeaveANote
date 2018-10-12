@@ -10,8 +10,8 @@ class NotesController < ApplicationController
   end
 
 
-  def rand
-      @note = Note.order('RANDOM()').first
+  def random
+    @note = Note.order('RANDOM()').first
   end
 
 
@@ -65,7 +65,7 @@ class NotesController < ApplicationController
 
     @note.destroy
 
-    redirect_to rand_path
+    redirect_to random_path
     flash[:success] = 'Your note has been deleted!'
 
   end
