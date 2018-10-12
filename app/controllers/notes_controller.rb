@@ -20,6 +20,11 @@ class NotesController < ApplicationController
 
     if @note.save
       flash[:success] = "Your note has been submitted!"
+      if session[:notes].present?
+        session[:notes].push(@note.id)
+      else
+        session[:notes] = [@note.id]
+      end
       redirect_to root_path
     else
       render "index"
