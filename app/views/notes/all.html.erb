@@ -1,7 +1,7 @@
 
   <header>
-    <%= link_to 'Random Note', rand_path, :class => "effect-shine"%>
-    <h1> Every Single Note Ever</h1>
+    <%= link_to 'Random Note', random_path, :class => "effect-shine"%>
+    <h1> <%= title 'Every Single Note Ever' %></h1>
     <%= link_to 'Leave A Note', root_path, :class => "effect-shine" %>
   </header>
 
@@ -19,6 +19,6 @@
       </div>
     </section>
 
-    <footer>
-      <p><%= link_to "Created by: Briana Gude", "www.brianabriana.com", :target => "_blank" %></p>
-    </footer>
+  <footer>
+    <p><%= link_to "Created by: Briana Gude", "www.brianabriana.com", :target => "_blank" %></p>
+  </footer>
