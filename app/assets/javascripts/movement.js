@@ -19,8 +19,4 @@ document.addEventListener("mousemove", function(event){
   // document.body.style.perspective = "500px"
   target.style.top = '35%'
   target.style.left = '43%'
-
-
-
-
 })
