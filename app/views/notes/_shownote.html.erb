@@ -19,14 +19,14 @@
 
 
 
-  <!-- <% if session[:notes].include?(@note.id) %>
+  <% if session[:notes].include?(@note.id) %>
     <footer class="actions">
       <p><%= link_to "Edit this note", edit_note_path(@note), :class => "effect-shine"%></p>
       <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
       <p><%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}, :class => "effect-shine" %></p>
     </footer>
-  <% else %> -->
+  <% else %>
     <footer>
       <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
     </footer>
-  <!-- <% end %> -->
+  <% end %>
