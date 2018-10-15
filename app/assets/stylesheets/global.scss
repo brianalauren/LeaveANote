@@ -305,7 +305,7 @@
 
 
 // media queries
-  @media (max-width: 770px){
+  @media (max-width: 1024px){
     body{
       font-size: 20px;
     }
@@ -343,7 +343,7 @@
 
     header{
       a:hover{
-        border-bottom: none;
+        border-bottom: 5px solid #000;
       }
     }
 
