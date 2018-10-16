@@ -12,6 +12,7 @@ class NotesController < ApplicationController
 
   def random
     @note = Note.order('RANDOM()').first
+    
   end
 
 
