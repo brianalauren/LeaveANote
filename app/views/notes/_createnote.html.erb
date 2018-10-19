@@ -1,6 +1,6 @@
     <div class="note">
       <%= simple_form_for @note do |f| %>
-        <%= f.input :body, placeholder: 'Tell me something...', label: false, error: 'Are you sure you have nothing to say?' %>
+        <%= f.input :body, placeholder: 'Tell me something...', label: false %>
         <%= f.submit 'Save Note' %>
       <% end %>
     </div>

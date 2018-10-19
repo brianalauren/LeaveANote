@@ -17,15 +17,15 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(form_params)
-      if session[:notes].present?
+      if session[:notes].present? and @note.save
         session[:notes].push(@note.id)
+        redirect_to root_path
+        flash[:success] = 'Your note has been submitted!'
       else
         session[:notes] = [@note.id]
+        render "index"
+        # flash[:error] = 'Your note must be between 3 and 150 characters!'
       end
-      redirect_to root_path
-    else
-      render "index"
-    
 
   end
 
