@@ -74,7 +74,10 @@
       outline: none;
       resize: none;
 
-      &:hover{border-bottom: 5px dotted #000;}
+      &:hover{
+        // border-bottom: 5px dotted #000;
+        // font-style: italic;
+      }
     }
 
   }

@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem "profanity_filter"
 gem 'meta-tags'
+gem 'activeadmin'
+gem 'devise'
+
 
 
 
