@@ -190,6 +190,22 @@
     }
 
 
+    section.instructions{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      p{
+        font-size:12px;
+        strong{
+          font-weight: 900;
+          color: red;
+        }
+      }
+
+    }
+
+
+
   div.allnotes{
     display: flex;
     justify-content: center;
