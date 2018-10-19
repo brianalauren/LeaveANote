@@ -329,6 +329,20 @@
       font-size: 20px;
     }
 
+    header{
+      padding: 10px;
+
+      a{
+        font-size: 28px;
+      }
+
+      h1{
+        font-size: 32px;
+      }
+      a:hover{
+        border-bottom: 5px solid #000;
+      }
+
     div.note{
       width:70%;
       }
@@ -356,16 +370,19 @@
 
     footer, footer.actions{
       a, p{
-        font-size: 24px;
-        margin: 15px;
+        margin: 25px;
         color: white;
+      }
+      a{
+        font-size: 28px;
+      }
+
+      p{
+        font-size: 32px;
       }
     }
 
-    header{
-      a:hover{
-        border-bottom: 5px solid #000;
-      }
+
     }
 
 
