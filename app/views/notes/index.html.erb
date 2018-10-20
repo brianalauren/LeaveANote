@@ -9,8 +9,19 @@
 
   <section class="instructions">
     <p>
-      1. Write A Note (it's completely anonymous) <br> 2. Save Your Note <br> 3. See all the notes everyone has posted <br> <strong>4a. Don't be racist</strong> <br> 4b. Don't look at all the notes if you can't take a joke (:
+      1. Write A Note (it's completely anonymous) <br> 2. Save Your Note <br> 3. See all the notes everyone has posted <br> <strong>4a. Don't be racist</strong> <br> 4b. Make my site better by posting more notes (:
     </p>
   </section>
 
-  
+<section class="featured">
+  <h2> The Best Notes </h2>
+    <div class="featurednotes"
+      <% @featured_notes.each do |note| %>
+        <%=link_to note_path(note) do %>
+          <div class="notes">
+            <h2><%= simple_format note.body %></h2>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+</section>
