@@ -5,7 +5,6 @@
     <%= link_to 'Random Note', random_path, :class => "effect-shine"%>
   </header>
 
-    <section class="allnotesz">
       <div class="allnotes">
         <% @notes.order('created_at desc').each do |note| %>
 
@@ -17,7 +16,6 @@
 
         <% end %>
       </div>
-    </section>
 
   <footer>
     <p><%= link_to "Created by: Briana Gude", "www.brianabriana.com", :target => "_blank" %></p>
