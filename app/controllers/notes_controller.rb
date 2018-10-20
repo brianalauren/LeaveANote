@@ -2,7 +2,7 @@ class NotesController < ApplicationController
 
   def index
     @note = Note.new
-    # @featured_notes = Note.where(is_featured: true)
+    @featured_notes = Note.where(is_featured: true)
   end
 
 
