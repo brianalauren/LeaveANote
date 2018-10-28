@@ -20,7 +20,7 @@ class NotesController < ApplicationController
     @note = Note.new(form_params)
 
     if @note.save
-      flash[:success] = "Your note has been submitted!"
+      flash[:success] = "Your note has been submitted! Go to All Notes to see what people are saying!"
       if session[:notes].present?
         session[:notes].push(@note.id)
       else

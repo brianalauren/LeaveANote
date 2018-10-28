@@ -10,7 +10,8 @@
 
           <%=link_to note_path(note) do %>
             <div class="notes">
-              <h2><%= simple_format note.body %></h2>
+              <%# <h2> <%= simple_format note.body)%></h2>
+              <h2> <%= simple_format truncate(note.body, :length => 100) %> </h2>
             </div>
           <% end %>
 
