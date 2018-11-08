@@ -18,9 +18,10 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(form_params)
+    @featured_notes = Note.where(is_featured: true)
 
     if @note.save
-      flash[:success] = "Your note has been submitted! Go to All Notes to see what people are saying!"
+      flash[:success] = "Your note has been submitted!"
       if session[:notes].present?
         session[:notes].push(@note.id)
       else

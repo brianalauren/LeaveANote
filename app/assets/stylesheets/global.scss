@@ -2,35 +2,37 @@
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Roboto Mono', monospace;
 
-  div.success, div.error{
-    display: flex;
-    color: red;
-    justify-content: center;
-    width: 100vw;
-  }
-
-
   body{
-    background-color: white;
-    color: black;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 18px;
+    color: black;
+
+    background-color: white;
+    cursor: crosshair;
 
     margin: 0 auto;
-    cursor:crosshair;
   }
 
 
   a{
     text-decoration: none;
     color: #000;
+    font-family: 'Roboto', sans-serif;
   }
 
   h1, h2, h3{
-      &:hover{color: red}
+    font-family: 'Roboto', sans-serif;
+    &:hover{color: red}
   }
 
+  div.success, div.error{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    justify-content: center;
+    width: 100vw;
+  }
 
     // effect-shine
     // a.effect-shine:hover {
@@ -51,8 +53,6 @@
 
 
   header{
-    font-family: 'Roboto', sans-serif;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,6 @@
 
     h1, a{
       margin: 20px 40px;
-      // width: 150px;
     }
 
     a{
@@ -77,30 +76,21 @@
       text-align: center;
 
       padding: .3em .3em .5em .3em;
-      // margin: 0 40px;
 
       border-bottom: 5px solid #000;
       outline: none;
       resize: none;
-
-      &:hover{
-        // border-bottom: 5px dotted #000;
-        // font-style: italic;
-      }
     }
 
   }
 
-
   div.note{
     margin: auto;
-    // width:50%;
     max-width: 800px;
     }
 
-
   textarea, input{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 600;
 
@@ -122,8 +112,6 @@
     width: 100%;
   }
 
-
-
   section.options{
     width: 100%;
     padding: 0px 20px 20px 20px;
@@ -132,7 +120,6 @@
     justify-content: center;
     align-items: flex-start;
   }
-
 
   div.option{
     margin: 50px;
@@ -352,91 +339,97 @@
   }
 
 
+  @media (max-width: 1250px){
+    section.featured{
+      div.notes h1{
 
+      }
+    }
+  }
 
 
 
 
 // media queries
-  @media (max-width: 1024px){
-    body{
-      font-size: 32px;
-    }
-
-    header{
-      h1, a{
-        margin: 20px 30px;
-        display: block;
-        // width: 100%;
-      }
-
-      a{
-        font-size: 22px;
-      }
-
-      h1{
-        font-size: 32px;
-      }
-
-      a:hover{
-        border-bottom: 5px solid #000;
-      }
-
-    div.note{
-      width:90%;
-      }
-
-    textarea, input{
-      font-size: 24px;
-      border-radius: 0;
-    }
-
-    textarea {
-      max-height: 600px;
-      max-width: 600px;
-      margin-top: 250px;
-    }
-
-    input{
-      margin-bottom: 100px;
-    }
-
-    section.instructions{
-      margin-top: 100px;
-      margin-bottom: 100px;
-    }
-
-    section.featurednotes{
-      margin-top: 400px;
-    }
-
-    div.notes{
-        max-width: 100%;
-        max-height: 300px;
-    }
-
-    div.shownote{
-      font-size: 24px;
-      max-height: 800px;
-      max-width: 800px;
-    }
-
-    footer, footer.actions{
-      a, p{
-        margin: 25px;
-        color: white;
-      }
-      a{
-        font-size: 28px;
-      }
-
-      p{
-        font-size: 34px;
-      }
-    }
-
-
-    }
-
-
-  }
+  // @media (max-width: 730px){
+  //   body{
+  //     font-size: 32px;
+  //   }
+  //
+  //   header{
+  //     h1, a{
+  //       margin: 20px 30px;
+  //       display: block;
+  //       // width: 100%;
+  //     }
+  //
+  //     a{
+  //       font-size: 22px;
+  //     }
+  //
+  //     h1{
+  //       font-size: 32px;
+  //     }
+  //
+  //     a:hover{
+  //       border-bottom: 5px solid #000;
+  //     }
+  //
+  //   div.note{
+  //     width:90%;
+  //     }
+  //
+  //   textarea, input{
+  //     font-size: 24px;
+  //     border-radius: 0;
+  //   }
+  //
+  //   textarea {
+  //     max-height: 600px;
+  //     max-width: 600px;
+  //     margin-top: 250px;
+  //   }
+  //
+  //   input{
+  //     margin-bottom: 100px;
+  //   }
+  //
+  //   section.instructions{
+  //     margin-top: 100px;
+  //     margin-bottom: 100px;
+  //   }
+  //
+  //   section.featurednotes{
+  //     margin-top: 400px;
+  //   }
+  //
+  //   div.notes{
+  //       max-width: 100%;
+  //       max-height: 300px;
+  //   }
+  //
+  //   div.shownote{
+  //     font-size: 24px;
+  //     max-height: 800px;
+  //     max-width: 800px;
+  //   }
+  //
+  //   footer, footer.actions{
+  //     a, p{
+  //       margin: 25px;
+  //       color: white;
+  //     }
+  //     a{
+  //       font-size: 28px;
+  //     }
+  //
+  //     p{
+  //       font-size: 34px;
+  //     }
+  //   }
+  //
+  //
+  //   }
+  //
+  //
+  // }
