@@ -1,7 +1,7 @@
 <header>
-    <%= link_to 'All Notes', all_path, :class => "effect-shine" %>
+    <%= link_to 'All Notes', all_path%>
     <h1> <%= title 'Note That' %></h1>
-    <%= link_to 'Random Note', random_path, :class => "effect-shine" %>
+    <%= link_to 'Random Note', random_path%>
   </header>
 
 
@@ -25,3 +25,5 @@
       <% end %>
     </div>
 </section>
+
+<%= render 'footer' %>

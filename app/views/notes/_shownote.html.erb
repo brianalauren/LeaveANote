@@ -1,15 +1,15 @@
-<div class="shownote">
+  <div class="shownote">
     <%= simple_format @note.body%>
   </div>
 
   <% if session[:notes].present? and session[:notes].include?(@note.id)%>
     <footer class="actions">
-      <p><%= link_to "Edit this note", edit_note_path(@note), :class => "effect-shine"%></p>
+      <%= link_to "Edit this note", edit_note_path(@note), :class => "effect-shine"%>
       <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
-      <p><%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}, :class => "effect-shine" %></p>
+      <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}, :class => "effect-shine" %>
     </footer>
   <% else %>
-    <footer>
+    <footer class="show">
       <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
     </footer>
-  <% end %> 
+  <% end %>
