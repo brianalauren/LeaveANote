@@ -1,6 +1,14 @@
-  @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
-  // font-family: 'Roboto', sans-serif;
+  // @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+  // // font-family: 'Roboto', sans-serif;
+  // // font-family: 'Roboto Mono', monospace;
+
+    @import url('https://fonts.googleapis.com/css?family=Bangers|Life+Savers:700|Questrial|Roboto+Mono:400,500,700|Roboto:400,500,700,900|Spicy+Rice');
+  // font-family: 'Spicy Rice', cursive;
+  // font-family: 'Questrial', sans-serif;
+  // font-family: 'Life Savers', cursive;
+  // font-family: 'Bangers', cursive;
   // font-family: 'Roboto Mono', monospace;
+  // font-family: 'Roboto', sans-serif;
 
   // colors
   $black: #0A0A0A;
@@ -63,7 +71,7 @@
     positin:fixed;
     top:0;
     left:0;
-    width:100vw;
+    width:100%;
     height:64px;
     background-color: $black;
 
@@ -117,9 +125,84 @@
     width: 100%;
   }
 
+
+
+
+
+
+  section.options{
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  div.option{
+    margin: 50px;
+  }
+
+  label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  label span{
+    float: right;
+    font-style: italic;
+  }
+
+  select, div.colors div{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+
+    border: 3px solid #000;
+    box-shadow: none;
+    transition: background-color 0.2s;
+
+    &:hover {background-color: #C8C8C8}
+  }
+
+  select{
+    width:200px;
+    // padding: 5em;
+    margin-top: 10px;
+    outline: none;
+  }
+
+  div.colors{
+    display: flex;
+  }
+
+  div.colors div{
+    text-align: center;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+
+    border-radius: 50%;
+    transition: border 0.2s;
+
+    // &:hover {border: rgba(155, 155, 155, 1);}
+
+    div.selected{
+      border: rgba(155, 155, 155, 1);}
+    }
+
+
+
+
+
+
+
   section.featured{
-    // max-width: 800px;
-    margin: 80px auto 0 auto;
+    margin: 20px auto 80px auto;
     text-align:center;
 
     .featurednotes{
@@ -236,7 +319,7 @@
     left: 0;
     width: 100%;
     height: 80px;
-    border: 5px solid #000;
+    border-top: 5px solid #000;
     background-color: $lightgrey;
     padding: 24px;
     display: flex;
