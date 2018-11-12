@@ -1,8 +1,15 @@
 
   <header>
-    <%= link_to 'All Notes', all_path, :class => "effect-shine" %>
-    <%= link_to 'Write A Note', root_path, :class => "effect-shine" %>
-    <%= link_to 'Random Note', random_path, :class => "effect-shine" %>
+    <%= link_to 'Randomize', random_path%>
+    <%= link_to 'New Note', root_path%>
+    <%= link_to 'All Notes', all_path%>
+    <h5>Note That</h5>
   </header>
+
+  <div class="headerm">
+    <%= link_to 'Randomize', random_path%>
+    <%= link_to 'New Note', root_path%>
+    <%= link_to 'All Notes', all_path%>
+  </div>
 
   <%= render 'shownote' %>
