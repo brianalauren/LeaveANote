@@ -1,7 +1,19 @@
   <header>
-    <%= link_to 'All Notes', all_path, :class => "effect-shine" %>
+    <%= link_to 'New Note', root_path%>
     <h1> <%= title 'Edit Your Note' %></h1>
-    <%= link_to 'Write A Note', root_path, :class => "effect-shine" %>
+    <%= link_to 'All Notes', all_path%>
+    <h5>Edit</h5>
   </header>
 
+  <div class="headerm">
+    <%= link_to 'New Note', root_path%>
+    <%= link_to 'All Notes', all_path%>
+  </div>
+
   <%= render 'createnote' %>
+
+  <footer class="actions">
+    <%= link_to 'Random Note', random_path%>
+    <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
+    <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}%>
+  </footer>
