@@ -15,9 +15,11 @@
     <% @notes.order('created_at desc').each do |note| %>
 
       <%=link_to note_path(note) do %>
-        <div class="notes">
-          <%# <h2> <%= simple_format note.body)%></h2>
+        <div class="notes desktop">
           <h2> <%= simple_format truncate(note.body, :length => 100) %> </h2>
+        </div>
+        <div class="notes mobile">
+          <h2> <%= simple_format truncate(note.body, :length => 25) %> </h2>
         </div>
       <% end %>
 

@@ -1,5 +1,5 @@
   <div class="shownote">
-    <%= simple_format @note.body%>
+    <h1><%= simple_format @note.body%></h1>
   </div>
 
   <% if session[:notes].present? and session[:notes].include?(@note.id)%>
