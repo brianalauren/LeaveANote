@@ -97,7 +97,7 @@
 
     a{margin:0 100px;}
     h1{transform: translateY(25%)}
-    h5{display: none;}
+    // h5{display: none;}
   }
 
   div.note{
@@ -361,12 +361,12 @@
 
 
   @media (max-width: 1250px){
-    h1, h5 {font-size: 43px;}
-    h2 {font-size: 35px;}
-    h3 {font-size: 28px;}
-    h4 {font-size: 20px;}
-    p {font-size: 16px;}
-    a {font-size: 16px;}
+    // h1, h5 {font-size: 43px;}
+    // h2 {font-size: 35px;}
+    // h3 {font-size: 28px;}
+    // h4 {font-size: 20px;}
+    // p {font-size: 16px;}
+    // a {font-size: 16px;}
      h5{display: inline;}
 
      header{
@@ -412,6 +412,6 @@
 
   @media (max-width: 720px){
     footer.actions{
-      a{font-size: 14px}
+      // a{font-size: 14px}
     }
   }
