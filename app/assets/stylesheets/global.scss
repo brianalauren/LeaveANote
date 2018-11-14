@@ -26,6 +26,9 @@
 
     margin:0;
     padding:0;
+
+    width: 100vw;
+    height: 100vh;
   }
 
   a{
@@ -241,6 +244,12 @@
     width: 80%;
     margin: 24px auto 80px auto;
 
+    .mobile{display:none}
+    .desktop{
+      display:flex;
+      align-items:center;
+    }
+
     div.notes{
       max-height: 200px;
       min-height: 100px;
@@ -361,19 +370,20 @@
   }
 
 
-  @media (max-width: 1250px){
-    h1, h5 {font-size: 52px;}
-    h2 {font-size: 43px;}
-    h3 {font-size: 35px;}
-    h4 {font-size: 28px;}
-    p {font-size: 20px;}
-    a {font-size: 20px;}
-     h5{display: inline;}
+  @media (max-width: 1000px){
+    h1, h5 {font-size: 98px;}
+    h2 {font-size: 67px;}
+    h3 {font-size: 47px;}
+    h4 {font-size: 20px;}
+    a{font-size: 35px}
+    p{font-size: 35px}
+
+    h5{display: inline;}
 
      header{
        display: flex;
        justify-content: center;
-       height:72px;
+       height:104px;
        h5{transform: translateY(70%)}
      }
 
@@ -390,7 +400,7 @@
       flex-wrap: nowrap;
 
       max-width: 100%;
-      height: 40px;
+      height: 100px;
       padding: 0 120px 0 120px;
 
       background-color: $lightgrey;
@@ -398,11 +408,51 @@
 
     div.note{
       margin: 40px auto 0 auto;
-      max-width: 600px;
+      max-width: 800px;
       }
 
     div.notes{
+      max-height: 400px;
+      min-height: 200px;
+      max-width: 500px;
+      min-width: 300px;
+
       margin: 10px;
+    }
+
+    div.allnotes{
+      .desktop{display:none}
+      .mobile{
+        display:flex;
+        align-items:center;
+      }
+
+      a, p{
+        margin:0;
+        padding:0;
+      }
+    }
+
+    textarea, input{
+      font-size: 35px;
+    }
+
+    textarea {
+      height: 512px;
+      width:100%;
+      margin-bottom: 24px;
+    }
+
+    input[type=submit] {
+      padding: 16px;
+      width: 100%;
+      margin-bottom: 56px;
+    }
+
+    footer{
+      height: 102px;
+      a{margin: 0 40px;}
+      text-align: center;
     }
   }
 
