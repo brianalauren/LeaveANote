@@ -4,9 +4,11 @@
 
   <% if session[:notes].present? and session[:notes].include?(@note.id)%>
     <footer class="actions">
-      <%= link_to "Edit this note", edit_note_path(@note)%>
-      <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
-      <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}%>
+      <!-- <div> -->
+        <%= link_to "Edit this note", edit_note_path(@note)%>
+        <p>Created <%= time_ago_in_words @note.created_at %> ago</p>
+        <%= link_to "Delete this note", note_path(@note), method: :delete, data: {confirm: "Are you sure??"}%>
+      <!-- </div> -->
     </footer>
   <% else %>
     <footer class="show">
