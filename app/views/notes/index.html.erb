@@ -4,30 +4,6 @@
     <%= link_to 'All Notes', all_path%>
   </header>
 
-  <div class="headerm">
-    <%= link_to 'Randomize', random_path%>
-    <%= link_to 'All Notes', all_path%>
-  </div>
-
   <%= render 'createnote' %>
-
-  <!-- <section class="instructions">
-    <p>
-      1. Write A Note (it's completely anonymous) <br> 2. Save Your Note <br> 3. See all the notes everyone has posted <br> <strong>4a. Don't be racist</strong> <br> 4b. Make my site better by posting more notes (:
-    </p>
-  </section> -->
-
-<section class="featured">
-  <h2> What Are People Saying? </h2>
-    <div class="featurednotes"
-      <% @featured_notes.each do |note| %>
-        <%=link_to note_path(note) do %>
-          <div class="notes">
-            <h2><%= simple_format note.body %></h2>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-</section>
 
 <%= render 'footer' %>

@@ -6,11 +6,6 @@
     <%= link_to 'New Note', root_path%>
   </header>
 
-  <div class="headerm">
-    <%= link_to 'Random Note', random_path%>
-    <%= link_to 'New Note', root_path%>
-  </div>
-
   <div class="allnotes">
     <% @notes.order('created_at desc').each do |note| %>
 

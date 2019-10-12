@@ -1,3 +1,4 @@
+// fonts
 @import url("https://fonts.googleapis.com/css?family=Bangers|Life+Savers:700|Questrial|Roboto+Mono:400,500,700|Roboto:400,500,700,900|Spicy+Rice");
 // font-family: 'Spicy Rice', cursive;
 // font-family: 'Questrial', sans-serif;
@@ -13,10 +14,21 @@ $lightgrey: #e8e8e8;
 $white: #fefefe;
 $red: #f74242;
 
+// mixins
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+// begin styles
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: "Roboto Mono", monospace;
   color: $black;
-  font-size: 18px;
   font-weight: 400;
   line-height: 1.45;
 
@@ -27,7 +39,7 @@ body {
   padding: 0;
 
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 }
 
 a {
@@ -40,17 +52,53 @@ a {
 }
 
 p {
+  margin-bottom: 1.25em;
   font-family: "Roboto Mono", monospace;
   color: $black;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.45;
-
-  margin-bottom: 1.3em;
 
   &:hover {
     color: $red;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.488em;
+}
+
+h2 {
+  font-size: 2.074em;
+}
+
+h3 {
+  font-size: 1.728em;
+}
+
+h4 {
+  font-size: 1.44em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+small,
+.text_small {
+  font-size: 0.833em;
+}
+
+p {
 }
 
 h1,
@@ -64,31 +112,12 @@ a {
   line-height: 1.2;
 }
 
-h1,
-h5 {
-  margin-top: 0;
-  font-size: 43px;
-}
-
-h2 {
-  font-size: 35px;
-}
-
-h3 {
-  font-size: 28px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
 div.success,
 div.error {
-  display: flex;
+  @include flex(center);
   font-family: "Roboto", sans-serif;
   background-color: $red;
   color: $black;
-  justify-content: center;
   width: 100vw;
 }
 
@@ -105,10 +134,7 @@ header {
   height: 64px;
   background-color: $black;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  @include flex(space-between);
   z-index: 5;
 
   h1,
@@ -139,7 +165,7 @@ div.note {
 textarea,
 input {
   font-family: "Roboto Mono", monospace;
-  font-size: 18px;
+  // font-size: 18px;
   line-height: 1.2;
   font-weight: 600;
 
@@ -175,9 +201,7 @@ section.options {
   width: 100%;
   padding: 0px 20px 20px 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  @include flex(center);
 }
 
 div.option {
@@ -242,9 +266,7 @@ section.featured {
   text-align: center;
 
   .featurednotes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center);
     flex-wrap: wrap;
   }
 }
@@ -271,9 +293,7 @@ div.notes {
 }
 
 div.allnotes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center);
   flex-wrap: wrap;
 
   width: 80%;
@@ -282,10 +302,10 @@ div.allnotes {
   .mobile {
     display: none;
   }
-  .desktop {
-    display: flex;
-    align-items: center;
-  }
+  // .desktop {
+  //   display: flex;
+  //   align-items: center;
+  // }
 
   div.notes {
     max-height: 200px;
@@ -300,11 +320,14 @@ div.allnotes {
 div.shownote {
   font-size: 18px;
   color: red;
+  p, h1 { margin: 0; }
 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include flex(center);
 
   padding: 10px;
 
@@ -319,16 +342,12 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  // position: absolute;
   width: 100%;
   height: 64px;
   border-top: 5px solid #000;
   background-color: $lightgrey;
-  padding: 24px 0 24px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // flex-wrap: wrap;
+  padding: 24px;
+  @include flex(space-between);
 
   p {
     margin: 0;
@@ -339,26 +358,8 @@ footer {
     color: $black;
   }
 
-  .links {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // padding: 24px 0;
-
-    font-weight: 400;
-  }
-
-  .contact {
-    // display: flex;
-  }
-
   .email {
-    // display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
   }
 
@@ -378,116 +379,58 @@ footer {
     border: 3px solid $black;
     margin-left: 0;
   }
-}
 
-footer.show {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  height: 8px;
-  background-color: $black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &.show {
+    background-color: $black;
+    justify-content: center;
 
-  p {
-    color: $white;
+    p {
+      color: $white;
+    }
+    a {
+      color: $white;
+    }
+    p:hover {
+      color: $white;
+    }
   }
-  a {
-    color: $white;
-  }
-  p:hover {
-    color: $white;
-  }
-}
 
-footer.actions {
-  // position: fixed;
-  // bottom: 0;
-  // left: 0;
-  // max-width: 100%;
-  // height: 80px;
-  background-color: $black;
-  // display: flex;
-  justify-content: space-between;
-  // align-items: center;
+  .actions {
+    background-color: $black;
 
-  // div {
-  //   width: 100%;
-  //   height: 100%;
-  //   background: pink;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  // }
-
-  p {
-    color: $white;
-    // margin: 0;
-    // padding: 0;
-  }
-  p:hover {
-    color: $white;
-  }
-  a {
-    color: $white;
-    margin: 0 100px;
-  }
-  a:hover {
-    color: $red;
+    p {
+      color: $white;
+    }
+    p:hover {
+      color: $white;
+    }
+    a {
+      color: $white;
+      margin: 0 100px;
+    }
+    a:hover {
+      color: $red;
+    }
   }
 }
 
 @media (max-width: 1000px) {
-  h1,
-  h5 {
-    font-size: 98px;
-  }
-  h2 {
-    font-size: 67px;
-  }
-  h3 {
-    font-size: 47px;
-  }
-  h4 {
-    font-size: 20px;
-  }
-  a {
-    font-size: 35px;
-  }
-  p {
-    font-size: 35px;
+  html {
+    font-size: 24px;
   }
 
-  h5 {
-    display: inline;
+  body {
+    margin: 200px 0 0 0;
+    // min-height: 100vh;
   }
 
   header {
-    display: flex;
     justify-content: center;
-    height: 104px;
-    h5 {
-      transform: translateY(70%);
+    height: 120px;
+
+    a {
+      display: none;
     }
-  }
-
-  header a {
-    display: none;
-  }
-
-  div.headerm {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-
-    max-width: 100%;
-    height: 100px;
-    padding: 0 120px 0 120px;
-
-    background-color: $lightgrey;
   }
 
   div.note {
@@ -538,23 +481,83 @@ footer.actions {
   }
 
   footer {
-    height: 102px;
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    // width: 100%;
+    flex-wrap: wrap;
+    height: 200px;
+    // justify-content: center;
+    margin: auto;
+    // border-top: 5px solid #000;
+    // background-color: $lightgrey;
+    // padding: 24px;
+    // @include flex(space-between);
+
+    p,
     a {
-      margin: 0 40px;
+      display: inline-block;
+      width: 100%;
     }
 
-    text-align: center;
-  }
-}
+    p {
+      margin: 0;
+      padding: 0;
+    }
 
-@media (max-width: 860px) {
-  footer.actions a {
-    margin: 0 24px;
-  }
-}
+    .email {
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
 
-@media (max-width: 720px) {
-  footer.actions {
-    // a{font-size: 14px}
+    input[type="email"] {
+      padding: 2px 8px;
+      margin-left: 10px;
+      border: 3px solid $black;
+    }
+
+    input[type="email"]:focus {
+      border: 3px solid $black;
+    }
+
+    input[type="submit"] {
+      padding: 2px 8px;
+      width: 100px;
+      border: 3px solid $black;
+      margin-left: 0;
+    }
+
+    .show {
+      background-color: $black;
+      justify-content: center;
+
+      p {
+        color: $white;
+      }
+      a {
+        color: $white;
+      }
+      p:hover {
+        color: $white;
+      }
+    }
+
+    .actions {
+      background-color: $black;
+
+      p {
+        color: $white;
+      }
+      p:hover {
+        color: $white;
+      }
+      a {
+        color: $white;
+        margin: 0 100px;
+      }
+      a:hover {
+        color: $red;
+      }
+    }
   }
 }
