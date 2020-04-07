@@ -1,3 +1,37 @@
-// Place all the styles related to the notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.note {
+  min-height: calc(100vh - 64px - 64px);
+  padding: 16px;
+  @include flex(center);
+}
+
+form {
+  width: 100%;
+  max-width: 620px;
+}
+
+
+// textarea,
+// input {
+//   @extend %border;
+//   font-family: $font-text;
+//   line-height: 1.2;
+//   font-weight: 600;
+//   box-shadow: none;
+//   transition: background-color 0.2s;
+
+//   &:hover { background-color: $grey-light; }
+// }
+
+// textarea {
+//   height: 400px;
+//   width: 100%;
+//   margin-bottom: 16px;
+//   padding: 16px;
+//   resize: none;
+// }
+
+input[type="submit"] {
+  text-align: center;
+  padding: 4px 16px;
+  cursor: pointer;
+}

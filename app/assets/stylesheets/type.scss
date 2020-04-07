@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,600,700|Inconsolata:400,700&display=swap');
+
+$font-heading: 'Cabin', sans-serif;
+$font-text: 'Inconsolata', monospace;
+
+html { font-size: 16px; }
+
+body {
+  font-family: $font-text;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+// p { margin-bottom: 1.15rem; }
+
+h1, h2, h3, h4, h5 {
+  // margin: 2.75rem 0 1.05rem;
+  font-family: $font-heading;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+
+small, 
+.text_small { font-size: 0.75rem; }
+
+a { 
+  font-size: 1.25rem; 
+  // font-weight: 600;
+  font-family: $font-text;
+  font-weight: 500; 
+}
+

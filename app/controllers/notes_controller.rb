@@ -31,33 +31,26 @@ class NotesController < ApplicationController
     else
       render "index"
     end
-
   end
-
 
   def edit
     @note = Note.find(params[:id])
   end
 
-
   def show
     @note = Note.find(params[:id])
   end
 
-
   def update
     @note = Note.find(params[:id])
 
-      if @note.update(form_params)
-        redirect_to note_path(@note)
-        flash[:success] = 'Your note has been updated!'
-
-      else
-        render "edit"
-      end
-
+    if @note.update(form_params)
+      redirect_to note_path(@note)
+      flash[:success] = 'Your note has been updated!'
+    else
+      render "edit"
+    end
   end
-
 
   def destroy
     @note = Note.find(params[:id])
@@ -66,7 +59,6 @@ class NotesController < ApplicationController
     redirect_to random_path
     flash[:success] = 'Your note has been deleted!'
   end
-
 
   def form_params
     params.require(:note).permit(:body)

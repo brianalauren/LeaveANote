@@ -14,8 +14,6 @@ group :production do
   gem 'pg'
 end
 
-
-
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -32,17 +30,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-
-
 # gems i like
 gem 'simple_form'
 gem "profanity_filter"
 gem 'meta-tags'
 gem 'activeadmin'
 gem 'devise'
-
-
-
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

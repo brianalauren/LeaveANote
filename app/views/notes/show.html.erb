@@ -1,8 +1,10 @@
   <header>
-    <%= link_to 'Randomize', random_path%>
-    <%= link_to 'New Note', root_path%>
-    <%= link_to 'All Notes', all_path%>
-    <h5>Note That</h5>
+    <div class="container">
+      <%= link_to 'Random', random_path%>
+      <%= link_to 'New', root_path%>
+      <%= link_to 'All', all_path%>
+      <h5>Leave A Note</h5>
+    </div>
   </header>
 
   <%= render 'shownote' %>
